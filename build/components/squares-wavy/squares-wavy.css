@@ -1,0 +1,408 @@
+.content {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 650px;
+  left: 50%;
+  margin: -325px 0 0 -325px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  width: 650px; }
+  .content div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 1px solid #000;
+    background-color: rgba(255, 119, 51, 0.9);
+    -webkit-transform-origin: 50% 50% 0;
+    -ms-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+    -webkit-animation: move 10000ms cubic-bezier(.42, 0, .58, 1) 0s infinite alternate forwards;
+    -moz-animation: move 10000ms cubic-bezier(.42, 0, .58, 1) 0s infinite alternate forwards;
+    -o-animation: move 10000ms cubic-bezier(.42, 0, .58, 1) 0s infinite alternate forwards;
+    animation: move 10000ms cubic-bezier(.42, 0, .58, 1) 0s infinite alternate forwards; }
+    .content div:nth-child(45) {
+      border: 1px solid rgba(255, 206, 204, 0.45);
+      background-color: rgba(255, 213, 204, 0.45);
+      width: 15px;
+      height: 15px;
+      margin: -7.5px 0 0 -7.5px;
+      -webkit-animation-delay: -30ms;
+      animation-delay: -30ms; }
+    .content div:nth-child(44) {
+      border: 1px solid rgba(255, 207, 204, 0.9);
+      background-color: rgba(255, 221, 204, 0.9);
+      width: 30px;
+      height: 30px;
+      margin: -15px 0 0 -15px;
+      -webkit-animation-delay: -60ms;
+      animation-delay: -60ms; }
+    .content div:nth-child(43) {
+      border: 1px solid #ffd1cc;
+      background-color: #ffe6cc;
+      width: 45px;
+      height: 45px;
+      margin: -22.5px 0 0 -22.5px;
+      -webkit-animation-delay: -90ms;
+      animation-delay: -90ms; }
+    .content div:nth-child(42) {
+      border: 1px solid #ffd3cc;
+      background-color: #ffeecc;
+      width: 60px;
+      height: 60px;
+      margin: -30px 0 0 -30px;
+      -webkit-animation-delay: -120ms;
+      animation-delay: -120ms; }
+    .content div:nth-child(41) {
+      border: 1px solid #ffd5cc;
+      background-color: #fff6cc;
+      width: 75px;
+      height: 75px;
+      margin: -37.5px 0 0 -37.5px;
+      -webkit-animation-delay: -150ms;
+      animation-delay: -150ms; }
+    .content div:nth-child(40) {
+      border: 1px solid #ffd6cc;
+      background-color: #ffffcc;
+      width: 90px;
+      height: 90px;
+      margin: -45px 0 0 -45px;
+      -webkit-animation-delay: -180ms;
+      animation-delay: -180ms; }
+    .content div:nth-child(39) {
+      border: 1px solid #ffd8cc;
+      background-color: #f6ffcc;
+      width: 105px;
+      height: 105px;
+      margin: -52.5px 0 0 -52.5px;
+      -webkit-animation-delay: -210ms;
+      animation-delay: -210ms; }
+    .content div:nth-child(38) {
+      border: 1px solid #ffdacc;
+      background-color: #eeffcc;
+      width: 120px;
+      height: 120px;
+      margin: -60px 0 0 -60px;
+      -webkit-animation-delay: -240ms;
+      animation-delay: -240ms; }
+    .content div:nth-child(37) {
+      border: 1px solid #ffdbcc;
+      background-color: #e6ffcc;
+      width: 135px;
+      height: 135px;
+      margin: -67.5px 0 0 -67.5px;
+      -webkit-animation-delay: -270ms;
+      animation-delay: -270ms; }
+    .content div:nth-child(36) {
+      border: 1px solid #ffddcc;
+      background-color: #ddffcc;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+      -webkit-animation-delay: -300ms;
+      animation-delay: -300ms; }
+    .content div:nth-child(35) {
+      border: 1px solid #ffdfcc;
+      background-color: #d5ffcc;
+      width: 165px;
+      height: 165px;
+      margin: -82.5px 0 0 -82.5px;
+      -webkit-animation-delay: -330ms;
+      animation-delay: -330ms; }
+    .content div:nth-child(34) {
+      border: 1px solid #ffe0cc;
+      background-color: #ccffcc;
+      width: 180px;
+      height: 180px;
+      margin: -90px 0 0 -90px;
+      -webkit-animation-delay: -360ms;
+      animation-delay: -360ms; }
+    .content div:nth-child(33) {
+      border: 1px solid #ffe2cc;
+      background-color: #ccffd5;
+      width: 195px;
+      height: 195px;
+      margin: -97.5px 0 0 -97.5px;
+      -webkit-animation-delay: -390ms;
+      animation-delay: -390ms; }
+    .content div:nth-child(32) {
+      border: 1px solid #ffe4cc;
+      background-color: #ccffdd;
+      width: 210px;
+      height: 210px;
+      margin: -105px 0 0 -105px;
+      -webkit-animation-delay: -420ms;
+      animation-delay: -420ms; }
+    .content div:nth-child(31) {
+      border: 1px solid #ffe6cc;
+      background-color: #ccffe6;
+      width: 225px;
+      height: 225px;
+      margin: -112.5px 0 0 -112.5px;
+      -webkit-animation-delay: -450ms;
+      animation-delay: -450ms; }
+    .content div:nth-child(30) {
+      border: 1px solid #ffe7cc;
+      background-color: #ccffee;
+      width: 240px;
+      height: 240px;
+      margin: -120px 0 0 -120px;
+      -webkit-animation-delay: -480ms;
+      animation-delay: -480ms; }
+    .content div:nth-child(29) {
+      border: 1px solid #ffe9cc;
+      background-color: #ccfff6;
+      width: 255px;
+      height: 255px;
+      margin: -127.5px 0 0 -127.5px;
+      -webkit-animation-delay: -510ms;
+      animation-delay: -510ms; }
+    .content div:nth-child(28) {
+      border: 1px solid #ffebcc;
+      background-color: #ccffff;
+      width: 270px;
+      height: 270px;
+      margin: -135px 0 0 -135px;
+      -webkit-animation-delay: -540ms;
+      animation-delay: -540ms; }
+    .content div:nth-child(27) {
+      border: 1px solid #ffeccc;
+      background-color: #ccf6ff;
+      width: 285px;
+      height: 285px;
+      margin: -142.5px 0 0 -142.5px;
+      -webkit-animation-delay: -570ms;
+      animation-delay: -570ms; }
+    .content div:nth-child(26) {
+      border: 1px solid #ffeecc;
+      background-color: #cceeff;
+      width: 300px;
+      height: 300px;
+      margin: -150px 0 0 -150px;
+      -webkit-animation-delay: -600ms;
+      animation-delay: -600ms; }
+    .content div:nth-child(25) {
+      border: 1px solid #fff0cc;
+      background-color: #cce5ff;
+      width: 315px;
+      height: 315px;
+      margin: -157.5px 0 0 -157.5px;
+      -webkit-animation-delay: -630ms;
+      animation-delay: -630ms; }
+    .content div:nth-child(24) {
+      border: 1px solid #fff1cc;
+      background-color: #ccddff;
+      width: 330px;
+      height: 330px;
+      margin: -165px 0 0 -165px;
+      -webkit-animation-delay: -660ms;
+      animation-delay: -660ms; }
+    .content div:nth-child(23) {
+      border: 1px solid #fff3cc;
+      background-color: #ccd5ff;
+      width: 345px;
+      height: 345px;
+      margin: -172.5px 0 0 -172.5px;
+      -webkit-animation-delay: -690ms;
+      animation-delay: -690ms; }
+    .content div:nth-child(22) {
+      border: 1px solid #fff5cc;
+      background-color: #ccccff;
+      width: 360px;
+      height: 360px;
+      margin: -180px 0 0 -180px;
+      -webkit-animation-delay: -720ms;
+      animation-delay: -720ms; }
+    .content div:nth-child(21) {
+      border: 1px solid #fff6cc;
+      background-color: #d5ccff;
+      width: 375px;
+      height: 375px;
+      margin: -187.5px 0 0 -187.5px;
+      -webkit-animation-delay: -750ms;
+      animation-delay: -750ms; }
+    .content div:nth-child(20) {
+      border: 1px solid #fff8cc;
+      background-color: #ddccff;
+      width: 390px;
+      height: 390px;
+      margin: -195px 0 0 -195px;
+      -webkit-animation-delay: -780ms;
+      animation-delay: -780ms; }
+    .content div:nth-child(19) {
+      border: 1px solid #fffacc;
+      background-color: #e5ccff;
+      width: 405px;
+      height: 405px;
+      margin: -202.5px 0 0 -202.5px;
+      -webkit-animation-delay: -810ms;
+      animation-delay: -810ms; }
+    .content div:nth-child(18) {
+      border: 1px solid #fffccc;
+      background-color: #eeccff;
+      width: 420px;
+      height: 420px;
+      margin: -210px 0 0 -210px;
+      -webkit-animation-delay: -840ms;
+      animation-delay: -840ms; }
+    .content div:nth-child(17) {
+      border: 1px solid #fffdcc;
+      background-color: #f6ccff;
+      width: 435px;
+      height: 435px;
+      margin: -217.5px 0 0 -217.5px;
+      -webkit-animation-delay: -870ms;
+      animation-delay: -870ms; }
+    .content div:nth-child(16) {
+      border: 1px solid #ffffcc;
+      background-color: #ffccff;
+      width: 450px;
+      height: 450px;
+      margin: -225px 0 0 -225px;
+      -webkit-animation-delay: -900ms;
+      animation-delay: -900ms; }
+    .content div:nth-child(15) {
+      border: 1px solid #fdffcc;
+      background-color: #ffccf6;
+      width: 465px;
+      height: 465px;
+      margin: -232.5px 0 0 -232.5px;
+      -webkit-animation-delay: -930ms;
+      animation-delay: -930ms; }
+    .content div:nth-child(14) {
+      border: 1px solid #fcffcc;
+      background-color: #ffccee;
+      width: 480px;
+      height: 480px;
+      margin: -240px 0 0 -240px;
+      -webkit-animation-delay: -960ms;
+      animation-delay: -960ms; }
+    .content div:nth-child(13) {
+      border: 1px solid #faffcc;
+      background-color: #ffcce6;
+      width: 495px;
+      height: 495px;
+      margin: -247.5px 0 0 -247.5px;
+      -webkit-animation-delay: -990ms;
+      animation-delay: -990ms; }
+    .content div:nth-child(12) {
+      border: 1px solid #f8ffcc;
+      background-color: #ffccdd;
+      width: 510px;
+      height: 510px;
+      margin: -255px 0 0 -255px;
+      -webkit-animation-delay: -1020ms;
+      animation-delay: -1020ms; }
+    .content div:nth-child(11) {
+      border: 1px solid #f6ffcc;
+      background-color: #ffccd5;
+      width: 525px;
+      height: 525px;
+      margin: -262.5px 0 0 -262.5px;
+      -webkit-animation-delay: -1050ms;
+      animation-delay: -1050ms; }
+    .content div:nth-child(10) {
+      border: 1px solid #f5ffcc;
+      background-color: #ffcccc;
+      width: 540px;
+      height: 540px;
+      margin: -270px 0 0 -270px;
+      -webkit-animation-delay: -1080ms;
+      animation-delay: -1080ms; }
+    .content div:nth-child(9) {
+      border: 1px solid #f3ffcc;
+      background-color: #ffd5cc;
+      width: 555px;
+      height: 555px;
+      margin: -277.5px 0 0 -277.5px;
+      -webkit-animation-delay: -1110ms;
+      animation-delay: -1110ms; }
+    .content div:nth-child(8) {
+      border: 1px solid #f1ffcc;
+      background-color: #ffddcc;
+      width: 570px;
+      height: 570px;
+      margin: -285px 0 0 -285px;
+      -webkit-animation-delay: -1140ms;
+      animation-delay: -1140ms; }
+    .content div:nth-child(7) {
+      border: 1px solid #f0ffcc;
+      background-color: #ffe6cc;
+      width: 585px;
+      height: 585px;
+      margin: -292.5px 0 0 -292.5px;
+      -webkit-animation-delay: -1170ms;
+      animation-delay: -1170ms; }
+    .content div:nth-child(6) {
+      border: 1px solid #eeffcc;
+      background-color: #ffeecc;
+      width: 600px;
+      height: 600px;
+      margin: -300px 0 0 -300px;
+      -webkit-animation-delay: -1200ms;
+      animation-delay: -1200ms; }
+    .content div:nth-child(5) {
+      border: 1px solid #ecffcc;
+      background-color: #fff6cc;
+      width: 615px;
+      height: 615px;
+      margin: -307.5px 0 0 -307.5px;
+      -webkit-animation-delay: -1230ms;
+      animation-delay: -1230ms; }
+    .content div:nth-child(4) {
+      border: 1px solid #ebffcc;
+      background-color: #ffffcc;
+      width: 630px;
+      height: 630px;
+      margin: -315px 0 0 -315px;
+      -webkit-animation-delay: -1260ms;
+      animation-delay: -1260ms; }
+    .content div:nth-child(3) {
+      border: 1px solid #e9ffcc;
+      background-color: #f6ffcc;
+      width: 645px;
+      height: 645px;
+      margin: -322.5px 0 0 -322.5px;
+      -webkit-animation-delay: -1290ms;
+      animation-delay: -1290ms; }
+    .content div:nth-child(2) {
+      border: 1px solid #e7ffcc;
+      background-color: #eeffcc;
+      width: 660px;
+      height: 660px;
+      margin: -330px 0 0 -330px;
+      -webkit-animation-delay: -1320ms;
+      animation-delay: -1320ms; }
+    .content div:nth-child(1) {
+      border: 1px solid #e6ffcc;
+      background-color: #e6ffcc;
+      width: 675px;
+      height: 675px;
+      margin: -337.5px 0 0 -337.5px;
+      -webkit-animation-delay: -1350ms;
+      animation-delay: -1350ms; }
+    .content div:nth-child(0) {
+      border: 1px solid #e4ffcc;
+      background-color: #ddffcc;
+      width: 690px;
+      height: 690px;
+      margin: -345px 0 0 -345px;
+      -webkit-animation-delay: -1380ms;
+      animation-delay: -1380ms; }
+
+@-webkit-keyframes move {
+  0% {
+    transform: rotateZ(-720deg); }
+  100% {
+    transform: rotateZ(720deg); } }
+@-moz-keyframes move {
+  0% {
+    transform: rotateZ(-720deg); }
+  100% {
+    transform: rotateZ(720deg); } }
+@keyframes move {
+  0% {
+    transform: rotateZ(-720deg); }
+  100% {
+    transform: rotateZ(720deg); } }
+
+/*# sourceMappingURL=squares-wavy.css.map */

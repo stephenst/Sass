@@ -1,0 +1,114 @@
+
+@import'../../_assets/scss/_mixins/math.scss';
+
+$num: 15;
+$base-colour: #dfef45;
+$spectrum: 360deg;
+$offset: 0deg;
+
+$size: 2em;
+$size-cont: $size*$num/2;
+$size-ball: $size*3.1459*1.6; 
+
+@function get-color($i, $type: false) {
+    $i: ($i *2) - 1;
+    
+    @if ($type) {
+        $i: $i + 2;
+    }
+    
+    @return adjust-hue($base-colour, $offset + $spectrum / ($num*2) * $i);
+}
+
+@mixin ball-position($i) {
+    $deg: 360deg * $i / ($num - 1);
+    top: (($size-cont) * sin($deg)) + $size-cont;
+    left: (($size-cont) * cos($deg)) + $size-cont/4;
+}
+
+body {
+    background: #111;
+}
+
+.content {
+    border-radius: 50%;
+    height: $size-cont;
+    margin: 10vh auto;
+    position: relative;
+    width: $size-cont;
+}
+
+.ball {
+    border-radius: 50%;
+    display: inline-block;
+    height: $size-ball;
+    position: absolute;
+    width: $size-ball; 
+
+
+    &::before {
+        border-radius: 50%;
+        content: '';
+        display: inline-block;
+        height: $size;
+        left: $size/3.1459/2;
+        position: absolute;
+        top: $size/3.1459/2;
+        width: $size; 
+    } 
+    
+    &::after {
+        border-radius: 50%;
+        bottom: $size/3.1459/2;
+        content: '';
+        display: inline-block;
+        height: $size;
+        position: absolute;
+        right: $size/3.1459/2;
+        width: $size; 
+    } 
+}
+
+@for $i from 0 to $num {
+    .ball:nth-child(#{$i}) {
+        animation: anim#{$i} 14s ($i)*.5s infinite ease-in-out;
+        border: 1px solid transparent;
+        transform: rotate((360deg* ($i) / ($num - 1)) + 45deg);
+        
+        @include ball-position($i);
+            
+        &::before {
+            background: get-color($i);
+        }
+        
+        &::after {
+            background: get-color($i, true);
+        }
+    }
+    
+    @keyframes anim#{$i} {
+        
+        0%, 1% {
+            border-color: transparent;
+            transform: rotate((360deg* $i / ($num - 1)) + 45deg);
+        }
+
+        2% {
+            border-color: get-color($i);        
+        }
+
+        10%, 55% {
+            border-color: transparent;        
+            transform: rotate((360deg* ($i) / ($num - 1)) + 225deg);
+        }
+
+        63% {
+            border-color: get-color($i); 
+        }
+
+        66%, 100% {
+            border-color: transparent;
+            transform: rotate((360deg* ($i) / ($num - 1)) + 405deg);
+        }
+    }
+}

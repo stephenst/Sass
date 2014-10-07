@@ -1,0 +1,59 @@
+
+
+.circle {
+    background: rgb(255, 255, 255);
+    border-radius: 100%;
+    cursor: pointer;
+    height: 55em;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0);
+    width: 55em; 
+
+    h1 {
+        color: rgba(189, 185, 199, 0);
+        font-family: sans-serif;
+        font-size: 1.6em;
+        font-weight: 900;
+        line-height: 8.2em;
+        text-align: center;
+        text-transform: uppercase;
+        transition: color .8s ease-in-out;
+        user-select: none;
+    }
+ 
+    &:before,
+    &:after {
+        border-radius: 100%;
+        box-shadow: inset 10.6em 0 0 rgba(30, 140, 209, .2), 
+                    inset 0 10.6em 0 rgba(30, 140, 209, .2), 
+                    inset -10.6em 0 0 rgba(30, 140, 209, .2), 
+                    inset 0 -10.6em 0 rgba(30, 140, 209, .2);
+        content: '';
+        height: inherit;
+        left: 0;
+        position: absolute;
+        top: 0; 
+        transition: box-shadow 1.75s;
+        width: inherit; 
+    }
+ 
+    // We rotate the :after pseudo-element to get the edge from the corner, we could also just do that with box-shadows.
+    &:after {
+        transform: rotate(16deg);
+    }
+ 
+    // There is no problem using "pseudo-class + pseudo-element" :)
+    &:hover:before,
+    &:hover:after {
+        box-shadow: inset .86em 0 0 rgba(255, 0, 0, .5), 
+                    inset 0 .86em 0 rgba(252, 150, 0, .5), 
+                    inset -.86em 0 0 rgba(0, 255, 0, .5), 
+                    inset 0 -.86em 0 rgba(0, 150, 255, .5);
+    }
+
+    &:hover > h1 {
+        color: rgba(185, 185, 185, 1);
+    }
+}

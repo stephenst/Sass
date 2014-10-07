@@ -1,0 +1,42 @@
+@mixin keyframes($animation-name) {
+
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($animate) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation: $animations;
+    -o-animation: $animations;
+    animation: $animations;
+}
+
+@mixin animation-delay($animate-delay) {
+    -webkit-animation-delay: $animate-delay;
+    animation-delay: $animate-delay;
+}
+
+@mixin transform-origin($origin) {
+    -webkit-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    transform-origin: $origin;
+}
