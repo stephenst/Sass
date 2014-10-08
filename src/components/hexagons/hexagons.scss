@@ -3,7 +3,7 @@
 
 body,
 html {
-    background: #000
+    background: #000;
 }
 
 .container {
@@ -21,7 +21,7 @@ hr {
     border: 0;
     display: inline-block;
     height: 26px;
-    margin: 13px 19px 0 19px;
+    margin: 13px 19px 0;
     position: relative;
     width: 4px;
     @include animation('rotate 10s infinite linear');
@@ -42,7 +42,7 @@ hr {
         transform: rotate(-60deg); // 60 + 60 = gives us the 120 degrees of hexagon.
     }
 
-    &::after{
+    &::after {
         right: -11px;
         transform: rotate(60deg);
     }
@@ -59,6 +59,7 @@ hr {
     50% {
         background: #f06d06;
     }
+
     100% {
         background: #eb9b62;
         transform: rotate(90deg);
@@ -69,6 +70,7 @@ hr {
     0% {
         border-color: #f06d06;
     }
+
     100% {
         transform: rotate(-90deg);
     }

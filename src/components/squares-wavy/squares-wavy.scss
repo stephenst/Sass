@@ -19,11 +19,11 @@ $color: #000;
     width: $s + px;
 
     div {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        border: 1px solid $color;
         background-color: hsla(20, 100%, 60%, .9);
+        border: 1px solid $color;
+        left: 50%;
+        position: absolute;
+        top: 50%;
         @include transform-origin(50% 50% 0);
         @include animation('move ' + $duration + ' cubic-bezier(.42, 0, .58, 1) 0s infinite alternate forwards');
 
@@ -34,11 +34,12 @@ $color: #000;
                 $new-color: 2 * $i;
                 $new-color2: 10 * $i;
                 $new-alpha: ($total * $i)/100;
-                border: 1px solid hsla($new-color, 100%, 90%, $new-alpha);
+                
                 background-color: hsla($new-color2, 100%, 90%, $new-alpha);
-                width: $size + px;
+                border: 1px solid hsla($new-color, 100%, 90%, $new-alpha);
                 height: $size + px;
                 margin: $half * - 1 + px 0 0 $half * - 1 + px;
+                width: $size + px;
                 @include animation-delay($i * 30 * - 1 + ms);
             }
         }
@@ -46,6 +47,11 @@ $color: #000;
 }
 
 @include keyframes('move') {
-    0% {transform: rotateZ(-$angle + deg)}
-    100% {transform: rotateZ( $angle + deg)}
+    0% {
+        transform: rotateZ(-$angle + deg);
+    }
+
+    100% {
+        transform: rotateZ($angle + deg);
+    }
 }
