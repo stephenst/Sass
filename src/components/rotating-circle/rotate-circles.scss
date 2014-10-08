@@ -1,5 +1,6 @@
 
 @import'../../_assets/scss/_mixins/math.scss';
+@import'../../_assets/scss/_mixins/keyframes.scss';
 
 $num: 15;
 $base-colour: #dfef45;
@@ -71,7 +72,7 @@ body {
 
 @for $i from 0 to $num {
     .ball:nth-child(#{$i}) {
-        animation: anim#{$i} 14s ($i)*.5s infinite ease-in-out;
+        @include animation('anim#' + $i + ' 14s ' + $i + ' *.5s infinite ease-in-out');
         border: 1px solid transparent;
         transform: rotate((360deg* ($i) / ($num - 1)) + 45deg);
         
@@ -86,8 +87,7 @@ body {
         }
     }
     
-    @keyframes anim#{$i} {
-        
+    @include keyframes('anim#' + $i + '') {
         0%, 1% {
             border-color: transparent;
             transform: rotate((360deg* $i / ($num - 1)) + 45deg);

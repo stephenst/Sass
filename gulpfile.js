@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     notify = require('gulp-notify'),
     jade = require('gulp-jade'),
-    sasslint = require('gulp-scss-lint');
+    scsslint = require('gulp-scss-lint');
 
 
 // SCSS
@@ -25,7 +25,7 @@ gulp.task('styles', function () {
 });
 
 // SCSS Lint
-gulp.task('sasslint', function () {
+gulp.task('scsslint', function () {
     gulp.src('src/**/*.scss')
         .pipe(scsslint({
             'config': 'config/scsslint.yml',
@@ -61,4 +61,4 @@ gulp.task('watch', function() {
 
 
 // Default task
-gulp.task('default', ['styles', 'sasslint', 'templates', 'watch']);
+gulp.task('default', ['styles', 'scsslint', 'templates', 'watch']);
