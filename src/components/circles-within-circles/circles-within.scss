@@ -4,6 +4,7 @@
 body {
     margin: 0;
     padding: 0;
+    background: #666;
 }
 
 .circle {
@@ -14,24 +15,24 @@ body {
 
 content {
     @include animation('loading 10s linear infinite');
-    background-color: hsla(20, 100%, 60%, .9);
-    background-image: 
-        linear-gradient(22.5deg, hsla(0, 0%, 100%, .2) 50%, transparent 50%), 
-        linear-gradient(-22.5deg, hsla(0, 0%, 100%, .2) 50%, transparent 50%), 
-        linear-gradient(67.5deg, hsla(0, 0%, 100%, .2) 50%, transparent 50%), 
+    background: hsla(20, 100%, 60%, .9) linear-gradient(22.5deg, hsla(0, 0%, 100%, .2) 50%, transparent 50%),
+        linear-gradient(-22.5deg, hsla(0, 0%, 100%, .2) 50%, transparent 50%),
+        linear-gradient(67.5deg, hsla(0, 0%, 100%, .2) 50%, transparent 50%),
         linear-gradient(-67.5deg, hsla(0, 0%, 100%, .2) 50%, transparent 50%);
+
     border-radius: 50%;
+    border: 3px solid #000;
     bottom: 0;
-    box-shadow: 0 0 4px 0 hsla(0, 0%, 0%, .5);
-    color: hsla(0, 0%, 30%, .1);
-    height: 70%;
+    box-shadow: 0 0 4px 0 hsla(0, 50%, 0%, .5);
+    color: hsla(0, 0%, 50%, .1);
+    height: 65%;
     left: 0;
     margin: auto;
     padding: 0;
     position: absolute;
     right: 0;
     top: 0;
-    width: 70%;
+    width: 65%;
 }
 
 #f1 {
@@ -62,9 +63,17 @@ content {
     background-color: hsla(140, 100%, 60%, .9);
 }
 
+#f8 {
+    background-color: hsla(160, 100%, 60%, .9);
+}
+
+#f9 {
+    background-color: hsla(180, 100%, 60%, .9);
+}
+
 #f0 {
     animation: none;
-    background-color: hsla(160, 100%, 60%, .9);
+    background-color: hsla(200, 100%, 60%, .9);
     height: 20em;
     width: 20em;
 }
@@ -73,7 +82,7 @@ content {
     0% {
         transform: rotate(0deg) translate3d(0, 21.43%, 0) rotate(0deg);
     }
-    
+
     100% {
         transform: rotate(720deg) translate3d(0, 21.43%, 0) rotate(360deg);
     }
