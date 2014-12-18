@@ -14,7 +14,15 @@ $width: 30em;
     transform: rotate(0deg) translate(29em, 0);
   }
 }
+@include keyframes('rotater') {
+  0% {
+    transform: translate(0em, 0);
+  }
 
+  100% {
+    transform: translate(29em, 0);
+  }
+}
 
 .circle {
   width: $width;
@@ -38,11 +46,32 @@ $width: 30em;
 
 $degree: 0deg;
 $delay: 0s;
+$num: 15;
+
 
 @for $i from 1 through 54 {
   div.circle:nth-child(#{$i}) {
     $degree: $degree + 20deg;
     transform: rotate($degree);
+
+    -webkit-animation-delay: (#{$i*0.50s});
+    animation-delay: (#{$i*0.5s});
+
+    // @include animation('anim' + $i + ' 14s infinite ease-in-out');
+
+    @include keyframes('anim' + $i + '') {
+      0% {
+        transform: rotate((360deg* $i / ($num - 1)) + 45deg);
+      }
+      55% {
+        transform: rotate((360deg* ($i) / ($num - 1)) + 225deg);
+      }
+      100% {
+        transform: rotate((360deg* ($i) / ($num - 1)) + 405deg);
+      }
+    }
+
+
 
     div.ball {
       $delay: $delay + 1s;
