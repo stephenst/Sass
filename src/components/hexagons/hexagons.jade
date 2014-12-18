@@ -1,9 +1,10 @@
-doctype html
-html(lang="en")
-    head
-        title= pageTitle
-        link(href='hexagons.css', rel='stylesheet', media='screen')
-    body
-        div.container
-            each i in new Array(500)
-                hr
+extends ../../index.jade
+
+block head
+    title Hexagons
+    link(href='hexagons.css', rel='stylesheet', media='screen')
+
+block content
+    div.container
+        each i in new Array(500)
+            hr

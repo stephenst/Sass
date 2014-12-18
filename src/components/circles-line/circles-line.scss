@@ -1,0 +1,53 @@
+
+
+@import'compass';
+@import'../../_assets/scss/_mixins/keyframes.scss';
+
+$width: 30em;
+
+@include keyframes('slider') {
+  0% {
+    transform: rotate(0deg) translate(0em, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate(29em, 0);
+  }
+}
+
+
+.circle {
+  width: $width;
+  height: 1px;
+  border: 0px solid #ccc;
+  position: absolute;
+  margin: 0 0 0 -($width/2)em;
+  top: 50%;
+  left: 30%;
+}
+.ball {
+  @include animation('slider 2.5s infinite ease-in alternate');
+  background-color: hsla(20, 100%, 60%, .5);
+  border-radius: 50%;
+  position: relative;
+  top: -1em;
+  height: 2em;
+  width: 2em;
+  margin: 0;
+}
+
+$degree: 0deg;
+$delay: 0s;
+
+@for $i from 1 through 54 {
+  div.circle:nth-child(#{$i}) {
+    $degree: $degree + 20deg;
+    transform: rotate($degree);
+
+    div.ball {
+      $delay: $delay + 1s;
+      -webkit-animation-delay: (#{$i*0.20s});
+      animation-delay:(#{$i*0.2s});
+    }
+  }
+}

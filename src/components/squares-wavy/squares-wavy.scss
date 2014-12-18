@@ -25,13 +25,13 @@ $color: #000;
         position: absolute;
         top: 50%;
         @include transform-origin(50% 50% 0);
-        @include animation('move ' + $duration + ' cubic-bezier(.42, 0, .58, 1) 0s infinite alternate forwards');
+        @include animation('move ' + $duration + ' cubic-bezier(.92, 0, .58, 1) 0s infinite alternate forwards');
 
         @for $i from 1 through ($total + 1) {
             &:nth-child(#{($total + 1) - $i}) {
                 $size: $i * $if;
                 $half: $size / 2;
-                $new-color: 2 * $i;
+                $new-color: 200 * $i;
                 $new-color2: 10 * $i;
                 $new-alpha: ($total * $i)/100;
                 

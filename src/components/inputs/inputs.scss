@@ -1,0 +1,103 @@
+
+@import'compass';
+@import'../../_assets/scss/_mixins/keyframes.scss';
+
+//------------------------------------------------
+//This is a SASS Mixin using only lighten, darken, saturate, desaturate. Go to the bottom to change these mixin arguments.
+//------------------------------------------------
+
+@mixin button($color: #337ab8, $text: 16px, $padding: 10px 14px) {
+
+  //---THE SCSS WITH COMPASS---//
+
+  //border
+  $hue1: $color;
+  //color
+  $hue2: darken($hue1, 6%);
+  //bg color
+  $hue3: lighten(saturate($hue1, 10%), 25%);
+  //box-shadow 1 and active box-shadow 1
+  $hue4: lighten(saturate($hue1, 10%), 5%);
+  //box-shadow 2, text-shadow, active bg color (shine)
+  $hue5: lighten(saturate($hue1, 80%), 40%);
+  //Hover bg color
+  $hue6: lighten(saturate($hue1, 5%), 35%);
+  //Hover Inset Shadow
+  $hue7: lighten(saturate($hue1, 20%), 13%);
+  //Top Inset Shadow on Active
+  $hue8: lighten($hue1, 50%);
+
+
+  display: inline-block;
+  background-color: $hue3;
+  @include box-shadow($hue4 0 -20px 35px -7px inset, $hue5 0 2px 6px 0px inset);
+  @include border-radius(3px);
+  @include transition(all .4s ease-out 0s);
+  border: 2px solid $hue1;
+  font-family: "century gothic", sans-serif;
+  font-size: $text;
+  padding: $padding;
+  color: $hue2;
+  text-shadow: 0 0 10px $hue3, 0px 1px 2px $hue5;
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 15px;
+
+
+
+  &:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 48%;
+    @include background-image(linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .2)));
+    left: 0; right: 0; bottom: 0;
+  }
+
+  &:hover {
+    background-color: $hue6;
+    @include box-shadow($hue7 0 -20px 30px -2px inset, #FFF 0 2px 4px -2px inset);
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $hue5;
+    @include box-shadow($hue4 0 -20px 40px 10px inset, $hue8 0 10px 4px -2px inset);
+
+
+    &:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 48%;
+      @include background-image(linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .2)));
+      left: 0; right: 0; bottom: 0;
+    }
+  }
+}
+
+
+
+
+//----------------------MixIn
+a.button--primary {
+  @include button;
+}
+
+a.button--secondary {
+  @include button(#209c32);
+}
+
+a.button--info {
+  @include button(#9c2020);
+}
+
+a.button--error {
+  @include button(#ad6d0e);
+}
+
+a.button--warning {
+  @include button(#888);
+}

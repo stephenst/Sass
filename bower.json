@@ -1,0 +1,22 @@
+{
+  "name": "sass",
+  "version": "0.0.1",
+  "homepage": "https://github.com/stephenst/Sass",
+  "main": "build/index.html",
+  "authors": [
+    "Tony Stephens"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gumby": "~2.6.3"
+  },
+  "devDependencies": {
+  }
+}

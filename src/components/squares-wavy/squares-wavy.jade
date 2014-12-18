@@ -1,10 +1,10 @@
-doctype html
-html(lang="en")
-    head
-        title= pageTitle
-        link(href='squares-wavy.css', rel='stylesheet', media='screen')
-    body
-        div.content
-            each i in new Array(45)
-                div
+extends ../../index.jade
+
+block head
+    title= pageTitle
+    link(href='squares-wavy.css', rel='stylesheet', media='screen')
+block content
+    div.content
+        each i in new Array(45)
+            div
 
